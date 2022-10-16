@@ -1,12 +1,16 @@
-import logo from "./logo.svg";
 import "./App.css";
 import AppHeader from "./components/AppHeader/AppHeader";
+import { useList } from "./context/context";
+import { ListProvider } from "./context/context";
 
 function App() {
+  const [list, setList] = useList();
   return (
-    <div className="App">
-      <AppHeader />
-    </div>
+    <ListProvider>
+      <div className="App">
+        <AppHeader />
+      </div>
+    </ListProvider>
   );
 }
 
