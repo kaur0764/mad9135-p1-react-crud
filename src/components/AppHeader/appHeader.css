@@ -1,0 +1,8 @@
+header button {
+  color: #282c34;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid #282c34;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+}

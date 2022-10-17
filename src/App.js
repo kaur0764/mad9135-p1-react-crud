@@ -1,16 +1,15 @@
 import "./App.css";
 import AppHeader from "./components/AppHeader/AppHeader";
-import { useList } from "./context/context";
-import { ListProvider } from "./context/context";
+import { useList } from "./context/ListContext";
+import NewItemView from "./components/NewItemView/NewItemView";
 
 function App() {
   const [list, setList] = useList();
   return (
-    <ListProvider>
-      <div className="App">
-        <AppHeader />
-      </div>
-    </ListProvider>
+    <div className="App">
+      <AppHeader />
+      <NewItemView />
+    </div>
   );
 }
 
