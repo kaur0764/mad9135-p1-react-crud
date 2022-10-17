@@ -12,7 +12,7 @@ function App() {
       <AppHeader />
       <Routes>
         <Route path="/" element={<ListView list={list} />} />
-        <Route path="/:id" element={<NewItemView />} />
+        <Route path="/newmovie" element={<NewItemView />} />
       </Routes>
     </div>
   );
