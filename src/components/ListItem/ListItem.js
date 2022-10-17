@@ -12,8 +12,8 @@ function ListItem({ movie }) {
           <p>{movie.genre}</p>
         </div>
         <div className="listButtons">
-          <button type="submit">Save</button>
-          <button type="submit">Cancel</button>
+          <button>Edit</button>
+          <button>Delete</button>
         </div>
       </div>
     );
