@@ -1,3 +1,16 @@
+:root{
+  --shadow-form-color:213deg 19% 56%;
+    --shadow-form-elevation-high:
+      0px 0.2px 0.2px hsl(var(--shadow-form-color) / 0.34),
+        0px 1.4px 1.6px -0.4px hsl(var(--shadow-form-color) / 0.34),
+        0px 2.7px 3px -0.7px hsl(var(--shadow-form-color) / 0.34),
+        -0.1px 4.4px 5px -1.1px hsl(var(--shadow-form-color) / 0.34),
+        -0.1px 7px 7.9px -1.4px hsl(var(--shadow-form-color) / 0.34),
+        -0.2px 10.9px 12.3px -1.8px hsl(var(--shadow-form-color) / 0.34),
+        -0.2px 16.6px 18.7px -2.1px hsl(var(--shadow-form-color) / 0.34),
+        -0.3px 24.5px 27.6px -2.5px hsl(var(--shadow-form-color) / 0.34);
+}
+
 form {
   display: grid;
   gap: 1.225rem;
@@ -6,11 +19,10 @@ form {
   max-width: 36rem;
   background-color: #fff;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 10px #eee;
+  box-shadow:var(--shadow-form-elevation-high);
   border: 1px solid #ddd;
   justify-content: center;
 }
-
 input {
   font-size: 1rem;
   padding: 0.5rem;
@@ -24,4 +36,11 @@ input {
   gap: 1rem;
   justify-content: flex-end;
   align-items: center;
+}
+
+.form-rating{
+    display: flex;
+      gap: 4rem;
+      justify-content: flex-start;
+      align-items: center;
 }

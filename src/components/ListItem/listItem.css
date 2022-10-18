@@ -1,12 +1,12 @@
 :root {
-  --shadow-color: 0deg 0% 63%;
+--shadow-color: 213deg 19% 56%;
   --shadow-elevation-medium:
     0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
     0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
     2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
     5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
 }
-  
+
 .listItem{
   display: flex;
   margin: 1.5rem;
@@ -15,6 +15,7 @@
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: var(--shadow-elevation-medium);
+  background-color: #fff;
 }
 
 .listDetails{
@@ -22,10 +23,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  color: var(--color-primary-dark)
+}
+
+.listDetails p{
+  margin: 0.5rem;
 }
 
 .movieName{
   font-size: 1.5rem;
+  color: var(--color-primary-darker)
 }
 
 .listButtons{
@@ -35,11 +42,17 @@
   gap: 0.5rem;
 }
 
-.listButtons button{
-  color: #282c34;
+button{
+  color:var(--color-primary-dark);
   font-size: 1rem;
   background-color: #fff;
-  border: 1px solid #282c34;
+  border: 1px solid var(--color-primary-dark);
   border-radius: 5px;
   padding: 0.3rem 0.5rem;
+}
+
+button:hover,
+button:active{
+color:#fff;
+  background-color: var(--color-primary-dark);
 }

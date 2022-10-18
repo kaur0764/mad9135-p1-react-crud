@@ -10,13 +10,17 @@ function Form() {
   function handleSubmit(ev) {
     ev.preventDefault();
     let name = document.querySelector("#movieName").value;
+    name = name.charAt(0).toUpperCase() + name.substring(1).toLowerCase();
     let genre = document.querySelector("#movieGenre").value;
-    let year = document.querySelector("#movieYear").value;
+    genre = genre.charAt(0).toUpperCase() + genre.substring(1).toLowerCase();
+    let year = document.querySelector("#movieYear").value.slice(0, 4);
+    let rating = document.querySelector("#movieRating").value;
     let movie = {
-      id: name + year,
+      id: name,
       name,
       genre,
       year,
+      rating,
     };
 
     setList(list.concat(movie));
@@ -39,7 +43,11 @@ function Form() {
       </div>
       <div className="form-grid">
         <label>Release Year</label>
-        <input type="number" id="movieYear" />
+        <input type="text" id="movieYear" />
+      </div>
+      <div className="form-rating">
+        <label>Rating</label>
+        <input type="number" id="movieRating" min="0" max="5" />
       </div>
       <div className="form-grid">
         <button type="submit">Save</button>
