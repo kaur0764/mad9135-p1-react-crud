@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useList } from "../../context/ListContext";
 import { useNavigate } from "react-router-dom";
 import "./form.css";
 
-function Form() {
+function Form({ setEdit, movie }) {
   const navigate = useNavigate();
-  const [list, setList] = useList();
+  const [list, setList] = useList([]);
+  let initialValues = "";
+  let movieId = "";
+  if (movie) {
+    movieId = movie.id;
+    initialValues = {
+      name: movie.name,
+      genre: movie.genre,
+      year: movie.year,
+      rating: movie.rating,
+    };
+  }
 
   function handleSubmit(ev) {
     ev.preventDefault();
@@ -23,11 +34,28 @@ function Form() {
       rating,
     };
 
-    setList(list.concat(movie));
+    if (!movieId) {
+      setList(list.concat(movie));
+    } else {
+      let newList = list.map(function (item) {
+        if (item.id == movieId) {
+          return movie;
+        }
+        return item;
+      });
+      setList(newList);
+      if (setEdit) {
+        setEdit(false);
+      }
+    }
+
     navigate("/");
   }
 
   function handleFormCancel() {
+    if (setEdit) {
+      setEdit(false);
+    }
     navigate("/");
   }
 
@@ -35,19 +63,41 @@ function Form() {
     <form className="App" onSubmit={handleSubmit}>
       <div className="form-grid">
         <label>Movie Name</label>
-        <input type="text" id="movieName" />
+        <input
+          defaultValue={initialValues.name}
+          type="text"
+          id="movieName"
+          required
+        />
       </div>
       <div className="form-grid">
         <label>Genre</label>
-        <input type="text" id="movieGenre" />
+        <input
+          defaultValue={initialValues.genre}
+          type="text"
+          id="movieGenre"
+          required
+        />
       </div>
       <div className="form-grid">
         <label>Release Year</label>
-        <input type="text" id="movieYear" />
+        <input
+          defaultValue={initialValues.year}
+          type="text"
+          id="movieYear"
+          required
+        />
       </div>
       <div className="form-rating">
         <label>Rating</label>
-        <input type="number" id="movieRating" min="0" max="5" />
+        <input
+          defaultValue={initialValues.rating}
+          type="number"
+          id="movieRating"
+          min="0"
+          max="5"
+          required
+        />
       </div>
       <div className="form-grid">
         <button type="submit">Save</button>
