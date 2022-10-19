@@ -18,6 +18,8 @@ function Form({ setEdit, movie }) {
     };
   }
 
+  let presentYear = new Date().getFullYear();
+
   function handleSubmit(ev) {
     ev.preventDefault();
     let name = document.querySelector("#movieName").value;
@@ -85,13 +87,15 @@ function Form({ setEdit, movie }) {
         <label htmlFor="movieYear">Release Year</label>
         <input
           defaultValue={initialValues.year}
-          type="text"
+          type="number"
+          min="1800"
+          max={presentYear}
           id="movieYear"
           name="movieYear"
           required
         />
       </div>
-      <div className="form-rating">
+      <div className="form-grid">
         <label htmlFor="movieRating">Rating</label>
         <input
           defaultValue={initialValues.rating}

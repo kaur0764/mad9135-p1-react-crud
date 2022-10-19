@@ -31,6 +31,7 @@ input {
   border-radius: 0.225rem;
   outline: none;
   background-color: var(--color-primary-pale);
+  width: 11.6rem;
 }
 
 input:focus{
@@ -43,11 +44,4 @@ border-color: var(--color-primary-light);
   gap: 1rem;
   justify-content: flex-end;
   align-items: center;
-}
-
-.form-rating{
-    display: flex;
-      gap: 4rem;
-      justify-content: flex-start;
-      align-items: center;
 }
