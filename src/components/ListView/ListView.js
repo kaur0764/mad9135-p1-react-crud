@@ -2,6 +2,7 @@ import React from "react";
 import { useList } from "../../context/ListContext";
 import ListItem from "../ListItem/ListItem";
 import DeleteDialog from "../DeleteDialog/DeleteDialog";
+import "./listView.css";
 
 function ListView() {
   const [list, setList] = useList();

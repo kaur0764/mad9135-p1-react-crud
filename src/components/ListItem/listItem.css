@@ -9,13 +9,15 @@
 
 .listItem{
   display: flex;
-  margin: 1.5rem;
   justify-content: space-between;
   align-items: center;
+  margin: 1.5rem auto;
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: var(--shadow-elevation-medium);
   background-color: #fff;
+  max-width: 56rem;
+  min-width: 18rem;
 }
 
 .listDetails{
@@ -32,7 +34,12 @@
 
 .movieName{
   font-size: 1.5rem;
-  color: var(--color-primary-darker)
+  color: var(--color-primary-darker);
+  text-align: left;
+  max-width: min(calc(70vw - 4rem), 48rem);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .listButtons{

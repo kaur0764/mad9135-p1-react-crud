@@ -29,9 +29,8 @@ function ListItem({ movie }) {
       return (
         <li className="listItem">
           <div className="listDetails">
-            <p className="movieName">
-              {movie.name} ({movie.year})
-            </p>
+            <p className="movieName">{movie.name}</p>
+            <p>{movie.year}</p>
             <p>{movie.genre}</p>
             <p>{rating}</p>
           </div>

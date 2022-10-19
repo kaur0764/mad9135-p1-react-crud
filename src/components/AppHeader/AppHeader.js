@@ -8,8 +8,8 @@ function AppHeader() {
   return (
     <>
       <header className="App-header">
-        <h1>To Watch List</h1>
-        <button onClick={() => navigate("/newmovie")}>Add New Movie</button>
+        <h1>Movies To Watch</h1>
+        <button onClick={() => navigate("/newmovie")}>Add Movie</button>
       </header>
     </>
   );
