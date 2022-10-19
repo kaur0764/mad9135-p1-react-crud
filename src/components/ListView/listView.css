@@ -1,3 +1,31 @@
+.instruction{
+  color: var(--color-primary-darker);
+  margin: 6rem 1rem;
+}
+
+.instruction h2{
+  font-size: 2rem;
+}
+
+.instructionIcons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instruction .material-icons{
+  font-size: 6rem;
+    color: var(--color-primary);
+}
+
+.instruction .material-icons.add {
+  font-size: 3rem;
+  margin-left: -2.5rem;
+  margin-bottom: -2rem;
+    color: var(--color-primary-pale);
+}
+
+
 ul{
   padding: 0.5rem 1.5rem;
 }

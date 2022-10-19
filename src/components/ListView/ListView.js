@@ -7,7 +7,15 @@ import "./listView.css";
 function ListView() {
   const [list, setList] = useList();
   if (!list.length) {
-    return <p>Add movies you want to watch</p>;
+    return (
+      <div className="instruction">
+        <h2>Add movies you want to watch</h2>
+        <div className="instructionIcons">
+          <i className="material-icons humidity">&#xe02c;</i>
+          <i className="material-icons humidity add">&#xe145;</i>
+        </div>
+      </div>
+    );
   } else {
     return (
       <div className="listView">
