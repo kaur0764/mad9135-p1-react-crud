@@ -62,38 +62,42 @@ function Form({ setEdit, movie }) {
   return (
     <form className="App" onSubmit={handleSubmit}>
       <div className="form-grid">
-        <label>Movie Name</label>
+        <label htmlFor="movieName">Movie Name</label>
         <input
           defaultValue={initialValues.name}
           type="text"
           id="movieName"
+          name="movieName"
           required
         />
       </div>
       <div className="form-grid">
-        <label>Genre</label>
+        <label htmlFor="movieGenre">Genre</label>
         <input
           defaultValue={initialValues.genre}
           type="text"
           id="movieGenre"
+          name="movieGenre"
           required
         />
       </div>
       <div className="form-grid">
-        <label>Release Year</label>
+        <label htmlFor="movieYear">Release Year</label>
         <input
           defaultValue={initialValues.year}
           type="text"
           id="movieYear"
+          name="movieYear"
           required
         />
       </div>
       <div className="form-rating">
-        <label>Rating</label>
+        <label htmlFor="movieRating">Rating</label>
         <input
           defaultValue={initialValues.rating}
           type="number"
           id="movieRating"
+          name="movieRating"
           min="0"
           max="5"
           required

@@ -28,7 +28,8 @@
   color: var(--color-primary-dark)
 }
 
-.listDetails p{
+.listDetails p,
+.listDetails h2{
   margin: 0.5rem;
 }
 
@@ -40,6 +41,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-weight: 600;
 }
 
 .listButtons{
