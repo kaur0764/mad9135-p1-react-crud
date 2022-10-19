@@ -74,16 +74,6 @@ function Form({ setEdit, movie }) {
         />
       </div>
       <div className="form-grid">
-        <label htmlFor="movieGenre">Genre</label>
-        <input
-          defaultValue={initialValues.genre}
-          type="text"
-          id="movieGenre"
-          name="movieGenre"
-          required
-        />
-      </div>
-      <div className="form-grid">
         <label htmlFor="movieYear">Release Year</label>
         <input
           defaultValue={initialValues.year}
@@ -92,6 +82,16 @@ function Form({ setEdit, movie }) {
           max={presentYear}
           id="movieYear"
           name="movieYear"
+          required
+        />
+      </div>
+      <div className="form-grid">
+        <label htmlFor="movieGenre">Genre</label>
+        <input
+          defaultValue={initialValues.genre}
+          type="text"
+          id="movieGenre"
+          name="movieGenre"
           required
         />
       </div>
