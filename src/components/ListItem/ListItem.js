@@ -7,7 +7,11 @@ function ListItem({ movie }) {
   const [edit, setEdit] = useState(false);
   if (movie) {
     for (let i = 1; i <= movie.rating; i++) {
-      rating.push(<i className="material-icons">&#xe838;</i>);
+      rating.push(
+        <i className="material-icons" key={movie.name + i}>
+          &#xe838;
+        </i>
+      );
     }
 
     function handleEdit() {

@@ -27,7 +27,7 @@ function Form({ setEdit, movie }) {
     let year = document.querySelector("#movieYear").value.slice(0, 4);
     let rating = document.querySelector("#movieRating").value;
     let movie = {
-      id: name,
+      id: name + year,
       name,
       genre,
       year,
