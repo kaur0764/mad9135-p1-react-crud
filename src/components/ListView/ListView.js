@@ -5,7 +5,7 @@ import DeleteDialog from "../DeleteDialog/DeleteDialog";
 import "./listView.css";
 
 function ListView() {
-  const [list, setList] = useList();
+  const [list] = useList();
   if (!list.length) {
     return (
       <div className="instruction">
