@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useList } from "../../context/ListContext";
 import { useNavigate } from "react-router-dom";
 import "./form.css";
@@ -40,7 +40,7 @@ function Form({ setEdit, movie }) {
       setList(list.concat(movie));
     } else {
       let newList = list.map(function (item) {
-        if (item.id == movieId) {
+        if (item.id === movieId) {
           return movie;
         }
         return item;
